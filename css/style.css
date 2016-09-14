@@ -28,7 +28,6 @@ body {
 	position: relative;
 	text-align: center;
 	height: 100%;
-	width: 100%;
     display: -webkit-flex;
     display: -moz-flex;
     display: -ms-flex;
@@ -40,6 +39,7 @@ body {
 
 .name {
     z-index: 1;
+    width: 100%;
 }
 
 .overlay {
@@ -49,19 +49,20 @@ body {
     right: 20px;
     z-index: 2;
     opacity: 1;
-	transition: 0.2s all ease;
-	-webkit-transition: 0.2s all ease;
-	-moz-transition: 0.2s all ease;
-	-ms-transition: 0.2s all ease;
+    transform: translateY(0);
+	transition: 0.267s all ease-in-out;
+	-webkit-transition: 0.267s all ease-in-out;
+	-moz-transition: 0.267s all ease-in-out;
+	-ms-transition: 0.267s all ease-in-out;
 }
 
 .overlay.is-hidden {
+    transform: translateY(8px);
     z-index: 0;
     opacity: 0;
 }
 
 .overlay__inner {
-    max-width: 530px;
     text-align: center;
 }
 
